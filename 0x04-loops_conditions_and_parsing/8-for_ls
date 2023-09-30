@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays filenames without the prefix up to the first dash ("-")
+
+for file in *; do
+	if [[ $file != .* ]]; then
+		name_after_dash="${file#*-}"
+		echo "$name_after_dash"
+	fi
+done
